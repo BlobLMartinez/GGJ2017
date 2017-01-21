@@ -5,6 +5,7 @@ using UnityEngine;
 public class Instantiation : MonoBehaviour {
 
     public GameObject wave;
+	public GameObject WaveSprite;
 	
 	// Update is called once per frame
 	void Update () {
@@ -17,6 +18,7 @@ public class Instantiation : MonoBehaviour {
     void kaboum()
     {
         GameObject _wave = (GameObject)Instantiate(wave, (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
+		GameObject.Instantiate (WaveSprite, _wave.transform.position, Quaternion.identity);
         
     }
 }
