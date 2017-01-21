@@ -13,6 +13,8 @@ public class Instantiation : MonoBehaviour {
         {
             kaboum();
         }
+
+
 	}
 
     void kaboum()
