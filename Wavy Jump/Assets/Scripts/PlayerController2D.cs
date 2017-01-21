@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using JumpLib;
 
 public class PlayerController2D : MonoBehaviour {
 
-	public int speed;
-    public float rayonMax;
-    public GameObject rayon;
+	public float speed;
 
+    private double distFing_to_Obj;
 	private Vector2 _inputs;
 	private Rigidbody2D rb2d;
     private Vector2 target;
-    private Ray ray;
-    private RaycastHit hit;
+
 
     void Start()
     {
@@ -27,12 +26,13 @@ public class PlayerController2D : MonoBehaviour {
     {
         target = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         _inputs = -(target - (Vector2)transform.position);
-        rb2d.velocity = _inputs * speed;
+        distFing_to_Obj = Math.Sqrt(Math.Pow(_inputs.x, 2) + Math.Pow(_inputs.y, 2));
+        Debug.Log(distFing_to_Obj);
+        rb2d.velocity = _inputs * speed * (6-(float)distFing_to_Obj);
     }
 
     private void OnMouseDown()
     {
-        Debug.Log("Box Clicked kgvsdbolwhdkvnc!");
         TouchOnScreen();
     }
 }
