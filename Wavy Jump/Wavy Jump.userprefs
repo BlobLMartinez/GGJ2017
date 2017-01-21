@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\WallDestroy.cs">
+    <Files>
+      <File FileName="Assets\Scripts\PlayerController2D.cs" Line="34" Column="11" />
+      <File FileName="Assets\Scripts\SmoothCamera2D.cs" Line="30" Column="47" />
+      <File FileName="Assets\Scripts\WallDestroy.cs" Line="14" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

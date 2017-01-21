@@ -24,11 +24,16 @@ public class PlayerController2D : MonoBehaviour {
     }
     public void TouchOnScreen ()
     {
+
         target = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
         _inputs = -(target - (Vector2)transform.position);
+
         distFing_to_Obj = Math.Sqrt(Math.Pow(_inputs.x, 2) + Math.Pow(_inputs.y, 2));
-        Debug.Log(distFing_to_Obj);
-        rb2d.velocity = _inputs * speed * (6-(float)distFing_to_Obj);
+
+        //Debug.Log(distFing_to_Obj);
+        
+		rb2d.velocity = _inputs * speed * (6-(float)distFing_to_Obj);
     }
 
     private void OnMouseDown()

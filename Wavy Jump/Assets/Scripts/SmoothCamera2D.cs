@@ -12,16 +12,28 @@ public class SmoothCamera2D : MonoBehaviour
     public GameObject target;
     public Vector3 offset;
     Vector3 targetPos;
-    // Use this for initialization
+
+	//variables instantiation des murs
+	public GameObject Wall;
+	private float CameraYStart;
+
+
     void Start()
     {
         targetPos = transform.position;
+		CameraYStart = transform.position.y;
     }
-
-    // Update is called once per frame
+		
     void FixedUpdate()
     {
-        if (target)
+		//instanciation des murs
+		if (transform.position.y > CameraYStart + 60) {
+			GameObject.Instantiate (Wall, new Vector2 (10, transform.position.y), Quaternion.identity);
+			GameObject.Instantiate (Wall, new Vector2 (-10, transform.position.y), Quaternion.identity);
+			CameraYStart = transform.position.y;
+		}
+
+		if (target)
         {
             Vector3 posNoZ = transform.position;
             posNoZ.z = target.transform.position.z;
