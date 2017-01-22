@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerDestroy : MonoBehaviour {
-	
-	
-	// Update is called once per frame
-	void Update () {
-		if (transform.position.y < -15) {
-			Destroy (gameObject);
-		}
+
+	public bool GameOver = false;
+
+
+
+	void OnTriggerEnter2D(Collider2D other) {
+		GameOver = true;
+		//Physics2D.gravity = Vector2.zero;
 	}
+
 }

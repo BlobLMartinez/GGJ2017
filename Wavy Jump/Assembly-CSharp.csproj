@@ -46,16 +46,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Killzone.cs" />
      <Compile Include="Assets\Scripts\Instantiation.cs" />
      <Compile Include="Assets\Scripts\JumpLib.cs" />
      <Compile Include="Assets\Scripts\ObjectDestroy.cs" />
      <Compile Include="Assets\Scripts\PlayerController2D.cs" />
      <Compile Include="Assets\Scripts\SmoothCamera2D.cs" />
      <Compile Include="Assets\Scripts\WallDestroy.cs" />
+     <Compile Include="Assets\Scripts\WaveDestroy.cs" />
      <Compile Include="Assets\Scripts\playerDestroy.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>D:/Programmes/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Programmes/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -70,9 +69,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>D:/Programmes/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>D:/Programmes/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>D:/Programmes/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
