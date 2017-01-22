@@ -9,8 +9,11 @@ public class playerDestroy : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D other) {
-		GameOver = true;
-		//Physics2D.gravity = Vector2.zero;
+
+		if (other.tag == "KillZone") {
+			
+			GameOver = true;
+		}
 	}
 
 }

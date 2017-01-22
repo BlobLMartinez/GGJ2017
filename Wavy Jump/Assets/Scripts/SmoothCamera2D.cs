@@ -28,22 +28,22 @@ public class SmoothCamera2D : MonoBehaviour
         targetPos = transform.position;
 		CameraYStart = transform.position.y;
 		BackgroundY = transform.position.y;
-		GameObject.Instantiate (Wall, new Vector2 (13, transform.position.y), Quaternion.identity);
-		GameObject.Instantiate (Wall, new Vector2 (-13, transform.position.y), Quaternion.identity);
+		GameObject.Instantiate (Wall, new Vector2 (8, transform.position.y), Quaternion.identity);
+		GameObject.Instantiate (Wall, new Vector2 (-8, transform.position.y), Quaternion.identity);
     }
 		
     void FixedUpdate()
     {
 		//instanciation des murs
-		if (transform.position.y > CameraYStart + 60) {
-			GameObject.Instantiate (Wall, new Vector2 (13, transform.position.y), Quaternion.identity);
-			GameObject.Instantiate (Wall, new Vector2 (-13, transform.position.y), Quaternion.identity);
+		if (transform.position.y > CameraYStart + 50) {
+			GameObject.Instantiate (Wall, new Vector2 (8, transform.position.y), Quaternion.identity);
+			GameObject.Instantiate (Wall, new Vector2 (-8, transform.position.y), Quaternion.identity);
 			CameraYStart = transform.position.y;
 		}
 
 		if (transform.position.y > BackgroundY - 5) {
-			GameObject.Instantiate (Background, new Vector3 (0 , BackgroundY + 17, 20), Quaternion.identity);
-			BackgroundY += 17;
+			GameObject.Instantiate (Background, new Vector3 (0 , BackgroundY + 19, 20), Quaternion.identity);
+			BackgroundY += 19;
 
 		}
 

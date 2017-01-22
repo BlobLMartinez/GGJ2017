@@ -16,7 +16,7 @@ public class PlayerController2D : MonoBehaviour {
     void Start()
     {
 		rb2d = GetComponent<Rigidbody2D> ();
-		GameOverScript = GetComponent<playerDestroy>();
+
 	}
 
 	void Update ()
@@ -26,7 +26,7 @@ public class PlayerController2D : MonoBehaviour {
     public void TouchOnScreen ()
     {
 		//le if empêche les contrôles si le joueur est en état de game over
-		//if (!GameOverScript.GameOver) {
+		if (!GameOverScript.GameOver) {
 			target = (Vector2)Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
 			_inputs = -(target - (Vector2)transform.position);
@@ -36,7 +36,7 @@ public class PlayerController2D : MonoBehaviour {
 			//Debug.Log(distFing_to_Obj);
         
 			rb2d.velocity = _inputs * speed * (6 - (float)distFing_to_Obj);
-		//}
+		}
     }
 
     private void OnMouseDown()

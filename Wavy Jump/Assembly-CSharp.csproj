@@ -46,11 +46,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Killzone.cs" />
+     <Compile Include="Assets\Scripts\GameOverTxt.cs" />
      <Compile Include="Assets\Scripts\Instantiation.cs" />
      <Compile Include="Assets\Scripts\JumpLib.cs" />
      <Compile Include="Assets\Scripts\ObjectDestroy.cs" />
      <Compile Include="Assets\Scripts\PlayerController2D.cs" />
+     <Compile Include="Assets\Scripts\RigidBody_Disabler.cs" />
+     <Compile Include="Assets\Scripts\Scoring.cs" />
      <Compile Include="Assets\Scripts\SmoothCamera2D.cs" />
      <Compile Include="Assets\Scripts\WallDestroy.cs" />
      <Compile Include="Assets\Scripts\WaveDestroy.cs" />
