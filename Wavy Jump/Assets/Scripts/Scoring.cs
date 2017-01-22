@@ -6,6 +6,7 @@ public class Scoring : MonoBehaviour {
 
     private int score;
     private float posPrece;
+	public GUIText ScoreTxt;
 
 	// Use this for initialization
 	void Start ()
@@ -20,6 +21,7 @@ public class Scoring : MonoBehaviour {
         {
             score = (int)transform.position.y;
         }
+		ScoreTxt.text = score.ToString ();
     }
 
     void SetScore()
