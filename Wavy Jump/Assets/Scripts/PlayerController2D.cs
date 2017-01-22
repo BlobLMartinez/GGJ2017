@@ -2,10 +2,13 @@
 using System;
 using System.Collections;
 using JumpLib;
+using UnityEngine.SceneManagement;
 
 public class PlayerController2D : MonoBehaviour {
 
 	public float speed;
+
+	private int touchindex = 0;
 
     private double distFing_to_Obj;
 	private Vector2 _inputs;
@@ -21,8 +24,22 @@ public class PlayerController2D : MonoBehaviour {
 
 	void Update ()
     {
+		if (Input.GetMouseButtonDown(0) ) {
+			if (GameOverScript.GameOver ) {
+				
+				SceneManager.LoadScene ("MainMenu");
+			}  
+		}
 
-    }
+		if (Input.touchCount > 0) {
+			if (Input.GetTouch (touchindex).phase == TouchPhase.Began) {
+				if (GameOverScript.GameOver) {
+
+					SceneManager.LoadScene ("MainMenu");
+				}  
+			}
+		}
+	}
     public void TouchOnScreen ()
     {
 		//le if empêche les contrôles si le joueur est en état de game over
@@ -37,6 +54,8 @@ public class PlayerController2D : MonoBehaviour {
         
 			rb2d.velocity = _inputs * speed * (6 - (float)distFing_to_Obj);
 		}
+
+
     }
 
     private void OnMouseDown()

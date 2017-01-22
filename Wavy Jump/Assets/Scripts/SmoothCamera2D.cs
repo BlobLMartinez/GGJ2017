@@ -15,7 +15,7 @@ public class SmoothCamera2D : MonoBehaviour
 
 	//banque de patterns
 	public GameObject[] BanquePatterns; 
-	public float PrevPattern;
+	public float NextPattern;
 
 	//variables instantiation des murs
 	public GameObject Wall;
@@ -36,7 +36,7 @@ public class SmoothCamera2D : MonoBehaviour
 		BackgroundY = transform.position.y;
 		GameObject.Instantiate (Wall, new Vector2 (8, transform.position.y), Quaternion.identity);
 		GameObject.Instantiate (Wall, new Vector2 (-8, transform.position.y), Quaternion.identity);
-		PrevPattern = transform.position.y;
+		NextPattern = transform.position.y;
     }
 		
     void FixedUpdate()
@@ -54,7 +54,11 @@ public class SmoothCamera2D : MonoBehaviour
 
 		}
 
+		if (transform.position.y >= NextPattern) {
+			Instantiate(BanquePatterns[Random.Range(0,7)], new Vector2 (0, transform.position.y + 20), Quaternion.identity);
+			NextPattern += 20;
 
+		}
 
 		if (target)
         {
