@@ -22,6 +22,8 @@ public class SmoothCamera2D : MonoBehaviour
 	private float BackgroundY;
 
 
+	//private float PrevPosY;
+
 
     void Start()
     {
@@ -30,6 +32,7 @@ public class SmoothCamera2D : MonoBehaviour
 		BackgroundY = transform.position.y;
 		GameObject.Instantiate (Wall, new Vector2 (8, transform.position.y), Quaternion.identity);
 		GameObject.Instantiate (Wall, new Vector2 (-8, transform.position.y), Quaternion.identity);
+		//PrevPosY = transform.position.y;
     }
 		
     void FixedUpdate()
@@ -58,8 +61,9 @@ public class SmoothCamera2D : MonoBehaviour
             interpVelocity = targetDirection.magnitude * 5f;
 
             targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
-
-            transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
+			if (targetPos.y > transform.position.y) {
+				transform.position = Vector3.Lerp (transform.position, targetPos + offset, 0.25f);
+			}
 
         }
     }

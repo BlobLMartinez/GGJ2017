@@ -16,6 +16,7 @@ public class GameOverTxt : MonoBehaviour {
 
 		if (GO.GameOver) {
 			Spr.enabled = true;
+			transform.position = new Vector2 (0, Camera.main.transform.position.y);
 		}
 	}
 
