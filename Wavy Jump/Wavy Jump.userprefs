@@ -1,15 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameOverTxt.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SmoothCamera2D.cs">
     <Files>
       <File FileName="Assets\Scripts\PlayerController2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SmoothCamera2D.cs" Line="66" Column="5" />
+      <File FileName="Assets\Scripts\SmoothCamera2D.cs" Line="57" Column="3" />
       <File FileName="Assets\Scripts\WallDestroy.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Instantiation.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\playerDestroy.cs" Line="12" Column="20" />
+      <File FileName="Assets\Scripts\playerDestroy.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\RigidBody_Disabler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameOverTxt.cs" Line="19" Column="75" />
-      <File FileName="Assets\Scripts\ObjectDestroy.cs" Line="10" Column="7" />
+      <File FileName="Assets\Scripts\GameOverTxt.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ObjectDestroy.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

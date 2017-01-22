@@ -13,6 +13,10 @@ public class SmoothCamera2D : MonoBehaviour
     public Vector3 offset;
     Vector3 targetPos;
 
+	//banque de patterns
+	public GameObject[] BanquePatterns; 
+	public float PrevPattern;
+
 	//variables instantiation des murs
 	public GameObject Wall;
 	private float CameraYStart;
@@ -22,7 +26,7 @@ public class SmoothCamera2D : MonoBehaviour
 	private float BackgroundY;
 
 
-	//private float PrevPosY;
+
 
 
     void Start()
@@ -32,7 +36,7 @@ public class SmoothCamera2D : MonoBehaviour
 		BackgroundY = transform.position.y;
 		GameObject.Instantiate (Wall, new Vector2 (8, transform.position.y), Quaternion.identity);
 		GameObject.Instantiate (Wall, new Vector2 (-8, transform.position.y), Quaternion.identity);
-		//PrevPosY = transform.position.y;
+		PrevPattern = transform.position.y;
     }
 		
     void FixedUpdate()
@@ -49,6 +53,8 @@ public class SmoothCamera2D : MonoBehaviour
 			BackgroundY += 19;
 
 		}
+
+
 
 		if (target)
         {
