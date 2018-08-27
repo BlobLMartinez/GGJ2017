@@ -1,2 +1,2 @@
 # GGJ2017
-Pour le projet de la Global Game Jam 2017
+Game made for the 2017 Global Game Jam in Unity.
